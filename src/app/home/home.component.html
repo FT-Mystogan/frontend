@@ -1,24 +1,24 @@
-<div >
+<div>
     <div class="content">
         <div>
-            <p><label for="left-content">Mảng chưa sắp xếp:</label></p>
-            <textarea disabled name="strings" id="strings" cols="30" rows="13"></textarea>
+            <p><label>Mảng chưa sắp xếp:</label></p>
+            <textarea [value]="firstArray" disabled name="strings" id="strings" cols="30" rows="13"></textarea>
         </div>
         <div>
-            <p><label for="left-content">Mảng đã sắp xếp:</label></p>
-            <textarea disabled name="strings" id="strings" cols="30" rows="13"></textarea>
+            <p><label>Mảng đã sắp xếp:</label></p>
+            <textarea [value]="lastArray" disabled name="strings" id="strings" cols="30" rows="13"></textarea>
         </div>
     </div>
-    <select name="key" id="key" style="margin-top: 10px; margin-left: 40%; height: 20px;">
-        <option value="1">Bubble Sort</option>
+    <select [(ngModel)]="key">
+        <option value="1" selected>Bubble Sort</option>
         <option value="2">Selection Sort</option>
         <option value="3">Insertion Sort</option>
         <option value="4">Quick Sort</option>
         <option value="5">Merge Sort</option>
     </select>
-    <div class="action" style="margin-left: 35%; margin-top: 30px;">
-        <button nz-button nzType="primary">Generate</button>
-        <button nz-button nzType="default">Sort</button>
-        <button nz-button nzType="primary" nzDanger>Clear Result</button>
+    <div class="action" class="action">
+        <button nz-button nzType="primary" (click)="generate()">Generate</button>
+        <button nz-button [disabled]="!check" nzType="default" (click)="sort()">Sort</button>
+        <button nz-button nzType="primary" (click)="clear()" nzDanger>Clear Result</button>
     </div>
 </div>

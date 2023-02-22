@@ -1,7 +1,20 @@
-textarea
-{
-  border:1px solid #999999;
-  width:100%;
-  margin:5px 0;
-  padding:3px;
+textarea {
+  border: 1px solid #999999;
+  width: 100%;
+  margin: 5px 0;
+  padding: 3px;
+}
+
+select {
+  margin-top: 10px;
+  margin-left: 40%;
+  height: 20px;
+}
+
+.action {
+  margin-left: 35%;
+  margin-top: 30px;
+}
+button{
+  margin-right: 1rem;
 }
